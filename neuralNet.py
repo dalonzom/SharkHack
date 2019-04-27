@@ -28,7 +28,7 @@ print(numTest)
 print(numTrain)
 IMG_SIZE = 200
 NB_CHANNELS = 3 
-BATCH_SIZE = 32 
+BATCH_SIZE = 64 
 NB_TRAIN_IMG = numTrain
 NB_VALID_IMG = numTest
 
@@ -94,7 +94,7 @@ start = time.time()
 cnn.fit_generator(
     train_generator,
     steps_per_epoch=NB_TRAIN_IMG//BATCH_SIZE,
-    epochs=10,
+    epochs=5,
     validation_data=validation_generator,
     validation_steps=NB_VALID_IMG//BATCH_SIZE)
 end = time.time()
